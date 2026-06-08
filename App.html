@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Garden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Anomali Sixteen</h1>
+        <p>Pilih character favoritmu...</p>
+
+        <div class="buttons">
+            <button onclick="ubahMood('bahagia')">Arfy</button>
+            <button onclick="ubahMood('tenang')">Firmansyah</button>
+            <button onclick="ubahMood('sedih')">Reyhan</button>
+            <button onclick="ubahMood('semangat')">Zakki</button>
+        </div>
+        <img
+    src="https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg"
+    alt="Super Hero"
+    class="hero-image">
+        <div id="garden" class="garden">
+            <div class="flower">🌼</div>
+            <p id="message">Jangan salah pilih</p>
+        </div>
+    </div>
+
+    <script>
+        function ubahMood(mood) {
+            const garden = document.getElementById("garden");
+            const message = document.getElementById("message");
+
+            switch(mood) {
+                case "bahagia":
+                    garden.style.background = "#ffe066";
+                    message.innerText = "Pendiam, tapi oke 🌞";
+                    break;
+
+                case "tenang":
+                    garden.style.background = "#a5d8ff";
+                    message.innerText = "Baik dan Asik🌊";
+                    break;
+
+                case "sedih":
+                    garden.style.background = "#adb5bd";
+                    message.innerText = "By one 11 Add 🌧️";
+                    break;
+
+                case "semangat":
+                    garden.style.background = "#ff922b";
+                    message.innerText = "Introvert dan banyak cewek";
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>
